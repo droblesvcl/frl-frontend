@@ -17,7 +17,7 @@ const PictionaryGame: React.FC = () => {
     setLoading(true);
     setError(null);
     try {
-      const res = await fetch('http://localhost:8000/word');
+      const res = await fetch('https://frl-backend.onrender.com/word');
       if (!res.ok) throw new Error('Failed to fetch word');
       const data: WordResponse = await res.json();
       setWord(data.word);
